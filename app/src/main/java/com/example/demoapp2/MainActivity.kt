@@ -13,6 +13,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 class MainActivity : AppCompatActivity() {
     lateinit var mediaPlayer: MediaPlayer
     lateinit var audioManager: AudioManager
+//    lateinit var playProgress:
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -27,11 +28,24 @@ class MainActivity : AppCompatActivity() {
             override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
                 audioManager.setStreamVolume(AudioManager.STREAM_MUSIC, progress, 0)
             }
-
             override fun onStartTrackingTouch(seekBar: SeekBar?) {}
             fun iLoveKotlin(){}
             override fun onStopTrackingTouch(seekBar: SeekBar?) {}
         })
+
+//        var curProgress = audioManager.getStreamVolume(AudioManager.STREAM_MUSIC)
+//        var maxProgress = audioManager.get(AudioManager.STREAM_MUSIC)
+//        var progressControl: SeekBar = findViewById(R.id.audioSeekBar) as SeekBar
+//        progressControl.max = mediaPlayer.duration
+//        volumeControl.progress = curVolume
+//        progressControl.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener{
+//            override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
+//                audioManager.setStreamVolume(AudioManager.STREAM_MUSIC, progress, 0)
+//            }
+//            override fun onStartTrackingTouch(seekBar: SeekBar?) {}
+//            fun iLoveKotlin(){}
+//            override fun onStopTrackingTouch(seekBar: SeekBar?) {}
+//        })
     }
     fun playAudio(view:View){
         mediaPlayer?.start()
@@ -39,6 +53,4 @@ class MainActivity : AppCompatActivity() {
     fun pauseAudio(view: View){
         mediaPlayer?.pause()
     }
-    fun tu(){}
-    fun tttt(){}
 }
