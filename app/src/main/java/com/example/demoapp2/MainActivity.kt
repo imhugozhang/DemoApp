@@ -39,4 +39,5 @@ class MainActivity : AppCompatActivity() {
     fun pauseAudio(view: View){
         mediaPlayer?.pause()
     }
+    fun tu(){}
 }
