@@ -40,4 +40,5 @@ class MainActivity : AppCompatActivity() {
         mediaPlayer?.pause()
     }
     fun tu(){}
+    fun tttt(){}
 }
