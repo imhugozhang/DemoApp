@@ -2,6 +2,8 @@ package com.example.demoapp2
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.provider.Settings
+import android.widget.ArrayAdapter
 import android.widget.ListView
 import android.widget.SeekBar
 
@@ -19,22 +21,29 @@ class MainActivity : AppCompatActivity() {
         timesTableSeekBar.setOnSeekBarChangeListener(object: SeekBar.OnSeekBarChangeListener{
             override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
                 var min = 1
-//                var timesTable: Int
+                var timesTable: Int
                 if (progress < min){
                     timesTable = min
                     timesTableSeekBar.progress = min
                 }
                 else timesTable = progress
+                timesTableGenerator(timesTable)
             }
-
-            override fun onStartTrackingTouch(seekBar: SeekBar?) {
-                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-            }
-
-            override fun onStopTrackingTouch(seekBar: SeekBar?) {
-                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-            }
+            override fun onStartTrackingTouch(seekBar: SeekBar?) {}
+            override fun onStopTrackingTouch(seekBar: SeekBar?) {}
         })
+        timesTableGenerator(10)
 
+    }
+
+    fun timesTableGenerator(timesTable: Int) {
+//        var timesTable = 10
+        lateinit var timesTableContent: MutableList<Int>
+        for (i in 1..10) {
+            timesTableContent.add(i * timesTable)
+        }
+        var arrayAdapter: ArrayAdapter<Int> =
+            ArrayAdapter(this, android.R.layout.simple_list_item_1, timesTableContent)
+        timesTableListView.adapter = arrayAdapter
     }
 }
