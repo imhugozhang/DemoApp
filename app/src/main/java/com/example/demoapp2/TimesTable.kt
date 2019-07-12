@@ -6,7 +6,7 @@ import android.widget.ArrayAdapter
 import android.widget.ListView
 import android.widget.SeekBar
 
-class MainActivity : AppCompatActivity() {
+class TimesTable : AppCompatActivity() {
     lateinit var timesTableSeekBar: SeekBar
     lateinit var timesTableListView: ListView
     override fun onCreate(savedInstanceState: Bundle?) {
