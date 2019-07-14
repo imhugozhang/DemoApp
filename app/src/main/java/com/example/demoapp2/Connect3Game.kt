@@ -1,3 +1,8 @@
+package com.example.demoapp2
+
+class Connect3Game {
+}
+
 //package com.example.demoapp
 //
 //import android.support.v7.app.AppCompatActivity

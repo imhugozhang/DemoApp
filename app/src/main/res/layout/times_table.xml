@@ -5,11 +5,11 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:context=".MainActivity">
-    <SeekBar android:layout_width="match_parent"
-             android:layout_height="wrap_content"
-             android:id="@+id/timesTableSeekBar"/>
-    <ListView android:layout_width="match_parent"
-              android:id="@+id/timeTableListView"
-              android:layout_height="match_parent"/>
+        tools:context=".TimesTable">
+    <!--<SeekBar android:layout_width="match_parent"-->
+             <!--android:layout_height="wrap_content"-->
+             <!--android:id="@+id/timesTableSeekBar"/>-->
+    <!--<ListView android:layout_width="match_parent"-->
+              <!--android:id="@+id/timeTableListView"-->
+              <!--android:layout_height="match_parent"/>-->
 </LinearLayout>
