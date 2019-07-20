@@ -10,11 +10,5 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        buttonClickMe= findViewById(R.id.buttonClickMe)
-        buttonClickMe.setOnClickListener { buttonClickMe.text= "Clicked" }
-        buttonClickMe.setOnLongClickListener {
-            buttonClickMe.text= "Loooooooong Clicked"
-            true
-        }
     }
 }

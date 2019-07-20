@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	tools:context=".FormActivity"
+	android:orientation="vertical">
+	<TextView android:layout_width="match_parent"
+	          android:layout_margin="10dp"
+	          android:layout_height="wrap_content"
+	          android:text="Gender"/>
+	<RadioGroup android:layout_width="match_parent"
+	            android:id="@+id/radioGroupGender"
+	            android:layout_height="wrap_content"
+	            android:layout_marginStart="10dp">
+		<RadioButton android:layout_width="match_parent"
+		             android:id="@+id/radioButtonMale"
+		             android:layout_marginVertical="4dp"
+		             android:layout_height="wrap_content"
+		             android:text="Male"/>
+		<RadioButton android:layout_width="match_parent"
+		             android:id="@+id/radioButtonFemale"
+		             android:layout_height="wrap_content"
+		             android:layout_marginVertical="4dp"
+		             android:text="Female"/>
+	</RadioGroup>
+	<TextView android:layout_width="match_parent"
+	          android:layout_margin="10dp"
+	          android:layout_height="wrap_content"
+	          android:text="Languages"/>
+	<LinearLayout android:layout_width="match_parent"
+	              android:layout_height="wrap_content"
+	              android:orientation="vertical"
+	              android:layout_marginStart="10dp">
+		<CheckBox android:layout_width="match_parent"
+		          android:id="@+id/checkBoxEnglish"
+		          android:layout_marginVertical="4dp"
+		          android:layout_height="wrap_content"
+		          android:text="English"/>
+		<CheckBox android:layout_width="match_parent"
+		          android:id="@+id/checkBoxHindi"
+		          android:layout_height="wrap_content"
+		          android:layout_marginVertical="4dp"
+		          android:text="Hindi"/>
+		<CheckBox android:layout_width="match_parent"
+		          android:id="@+id/checkBoxChinese"
+		          android:layout_marginVertical="4dp"
+		          android:layout_height="wrap_content"
+		          android:text="Chinese"/>
+	</LinearLayout>
+	<Button android:layout_width="wrap_content"
+	        android:id="@+id/buttonSubmit"
+	        android:layout_height="wrap_content"
+	        android:text="submit"
+	        android:layout_gravity="center_horizontal"
+	        android:layout_margin="@android:dimen/app_icon_size"
+	        android:textAllCaps="false"/>
+	<TextView android:layout_width="match_parent"
+	          android:id="@+id/textViewAnswer"
+	          android:layout_height="match_parent"
+	          android:gravity="center"
+	          android:text="Hi"/>
+</LinearLayout>
