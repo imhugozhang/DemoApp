@@ -1,3 +1,4 @@
 <resources>
-	<string name="app_name">Demo App 2</string>
+    <string name="app_name">Demo App 2</string>
+    <string name="title_activity_auto_scroll_text_view">AutoScrollTextViewActivity</string>
 </resources>

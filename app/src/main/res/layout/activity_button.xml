@@ -9,7 +9,6 @@
             android:layout_height="wrap_content"
             android:text="Click Me"
             android:layout_centerInParent="true"
-            android:id="@+id/buttonClickMe"
-    />
+            android:id="@+id/buttonClickMe"/>
 
 </RelativeLayout>

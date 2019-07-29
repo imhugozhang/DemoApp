@@ -7,14 +7,17 @@ import android.text.TextWatcher
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import kotlinx.android.synthetic.main.activity_auto_complete_text_view.*
+import kotlinx.android.synthetic.main.activity_auto_complete_text_view.editText
+import kotlinx.android.synthetic.main.activity_edit_text.*
 
 class EditTextActivity : AppCompatActivity() {
 
 	override fun onCreate(savedInstanceState: Bundle?) {
 		super.onCreate(savedInstanceState)
 		setContentView(R.layout.activity_edit_text)
-		var editText= findViewById<EditText>(R.id.editText)
-		var textViewResult= findViewById<TextView>(R.id.textViewResult)
+//		var editText= findViewById<EditText>(R.id.editText)
+//		var textViewResult= findViewById<TextView>(R.id.textViewResult)
 //		var buttonCopy= findViewById<Button>(R.id.buttonCopy)
 //		buttonCopy.setOnClickListener { }
 		editText.addTextChangedListener(object: TextWatcher{
