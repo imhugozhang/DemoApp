@@ -15,7 +15,7 @@ class AutoCompleteTextView : AppCompatActivity() {
         var adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, suggestion)
         autoCompleteTextView.threshold = 0
         autoCompleteTextView.setAdapter(adapter)
-        autoCompleteTextView.setOnFocusChangeListener({ v: View?, hasFocus: Boolean ->
+        autoCompleteTextView.setOnFocusChangeListener({ _: View?, hasFocus: Boolean ->
             if (hasFocus) autoCompleteTextView.showDropDown()
         })
     }

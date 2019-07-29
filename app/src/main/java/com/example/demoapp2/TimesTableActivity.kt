@@ -3,34 +3,28 @@ package com.example.demoapp2
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ArrayAdapter
-import android.widget.ListView
 import android.widget.SeekBar
 import kotlinx.android.synthetic.main.activity_times_table.*
 
 class TimesTableActivity : AppCompatActivity() {
-//    lateinit var timesTableListView: ListView
 
-//    fun generateTimesTable(timesTable: Int) {
-//        val timesTableContent = arrayListOf<String>()
-//        for (i in 1..10) {
-//            timesTableContent.add((i * timesTable).toString())
-//        }
-//        val arrayAdapter = ArrayAdapter(
-//            this,
-//            android.R.layout.simple_list_item_1,
-//            timesTableContent
-//        )
-//        timeTableListView.adapter = arrayAdapter
-//    }
+    fun generateTimesTable(timesTable: Int) {
+        val timesTableContent = arrayListOf<String>()
+        for (i in 1..10) {
+            timesTableContent.add((i * timesTable).toString())
+        }
+        val arrayAdapter = ArrayAdapter( this,
+            android.R.layout.simple_list_item_1, timesTableContent
+        )
+        timeTableListView.adapter = arrayAdapter
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-//        val timesTableSeekBar: SeekBar = findViewById(R.id.timesTableSeekBar)
-//        timesTableListView = findViewById(R.id.timeTableListView)
+        setContentView(R.layout.activity_times_table)
         timesTableSeekBar.max = 20
         timesTableSeekBar.progress = 10
-        var timesTable= 10
+        var timesTable: Int
         timesTableSeekBar.setOnSeekBarChangeListener(object: SeekBar.OnSeekBarChangeListener{
             override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
                 val min = 1
@@ -44,18 +38,6 @@ class TimesTableActivity : AppCompatActivity() {
             override fun onStartTrackingTouch(seekBar: SeekBar?) {}
             override fun onStopTrackingTouch(seekBar: SeekBar?) {}
         })
-//        generateTimesTable(10)
-
-        val timesTableContent = arrayListOf<String>()
-//        val timesTable= 10
-        for (i in 1..10) {
-            timesTableContent.add((i * timesTable).toString())
-        }
-        val arrayAdapter = ArrayAdapter(
-            this,
-            android.R.layout.simple_list_item_1,
-            timesTableContent
-        )
-        timeTableListView.adapter = arrayAdapter
+        generateTimesTable(10)
     }
 }
